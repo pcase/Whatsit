@@ -1,2 +1,2 @@
 # Whatsit
-iOS app that uses IBM Watson to play a guessing game
+iOS app that uses IBM Cloud to play a guessing game
