@@ -19,9 +19,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
     let apiKey = "41T3884Bc5ufPS3fwMi-PjP4WQA_I8ZF_tfn4WIaJ_Ls"
     let version = "2018-07-17"
     var classificationResults : [String] = []
-    var typeValue = String()
+    var typeValue = String.EMPTY
     var rightCount = 0
     var wrongCount = 0
+    var useCamera : Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +35,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
     }
     
     func initTitleAndView() {
-        navigationItem.title = "Take a picture"
+        if (useCamera) {
+            navigationItem.title = String.TAKE_A_PICTURE
+        } else {
+            navigationItem.title = String.SELECT_A_PICTURE
+        }
         imageView.image = UIImage(named: "placeholder")
     }
     
@@ -52,9 +57,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
         
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageView.image = image
+            imageView.roundCornersForAspectFit(radius: 15)
             imagePicker.dismiss(animated: true, completion: nil)
             
-            self.navigationItem.title = "Guess"
+            self.navigationItem.title = String.GUESS
             
             let visualRecognition = VisualRecognition(version: version, apiKey: apiKey)
             let imageData = image.jpegData(compressionQuality: 0.01)
@@ -83,47 +89,50 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
     }
 
     @IBAction func cameraTapped(_ sender: UIBarButtonItem) {
-        self.navigationItem.title = ""
+        self.navigationItem.title = String.EMPTY
         imagePicker.allowsEditing = false
         
         present(imagePicker, animated: true, completion: nil)
     }
     
     func showStartAlert() {
-        let alert = UIAlertController(title: "", message: "Let's play a game.\nYou take a picture, and I guess what it is", preferredStyle: .alert)
+        let alert = UIAlertController(title: String.EMPTY, message: String.LETS_PLAY, preferredStyle: .alert)
         alert.isModalInPopover = true
         
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
+        alert.addAction(UIAlertAction(title: String.OK, style: .default, handler: { (UIAlertAction) in
             self.pickImageSourceAlert()
         }))
         self.present(alert,animated: true, completion: nil )
     }
     
     func pickImageSourceAlert() {
-        let alert = UIAlertController(title: "", message: "Camera or photo library?", preferredStyle: .alert)
+        let alert = UIAlertController(title: String.EMPTY, message: String.CAMERA_OR_PHOTO, preferredStyle: .alert)
         alert.isModalInPopover = true
         
-        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { (UIAlertAction) in
+        alert.addAction(UIAlertAction(title: String.CAMERA, style: .default, handler: { (UIAlertAction) in
             self.imagePicker.sourceType = .camera
+            self.useCamera = true
+            self.navigationItem.title = String.TAKE_A_PICTURE
         }))
         
-        alert.addAction(UIAlertAction(title: "Photo library", style: .default, handler: { (UIAlertAction) in
+        alert.addAction(UIAlertAction(title: String.PHOTO_LIBRARY, style: .default, handler: { (UIAlertAction) in
             self.imagePicker.sourceType = .photoLibrary
+            self.useCamera = false
+            self.navigationItem.title = String.SELECT_A_PICTURE
         }))
-        self.navigationItem.title = "Take a picture"
         self.present(alert,animated: true, completion: nil )
     }
     
     func showGuessAlert(guess: String) {
-        let alert = UIAlertController(title: "", message: "Is it \"" + guess + "\"?", preferredStyle: .alert)
+        let alert = UIAlertController(title: String.EMPTY, message: String.IS_IT + String.SPACE + String.DOUBLE_QUOTE + guess + String.DOUBLE_QUOTE, preferredStyle: .alert)
         alert.isModalInPopover = true
         
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (UIAlertAction) in
+        alert.addAction(UIAlertAction(title: String.YES, style: .default, handler: { (UIAlertAction) in
             self.rightCount += 1
             self.showResultAlert(win: true)
         }))
         
-        alert.addAction(UIAlertAction(title: "No", style: .default, handler: { (UIAlertAction) in
+        alert.addAction(UIAlertAction(title: String.NO, style: .default, handler: { (UIAlertAction) in
             self.wrongCount += 1
             self.showResultAlert(win: false)
         }))
@@ -131,45 +140,45 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
     }
     
     func showResultAlert(win: Bool) {
-        var message : String = ""
+        var message = String.EMPTY
         if (win) {
-            message = "We win!"
+            message = String.WE_WIN
         } else {
-            message = "I guessed wrong!"
+            message = String.I_GUESSED_WRONG
         }
-        let alert = UIAlertController(title: "Results", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
+        let alert = UIAlertController(title: String.EMPTY, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: String.OK, style: .default, handler: { (UIAlertAction) in
             self.playAgainAlert()
         }))
         self.present(alert,animated: true, completion: nil )
     }
     
     func playAgainAlert() {
-        let alert = UIAlertController(title: "Results", message: "Do you want to play again?", preferredStyle: .alert)
+        let alert = UIAlertController(title: String.EMPTY, message: String.PLAY_AGAIN, preferredStyle: .alert)
         alert.isModalInPopover = true
         
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (UIAlertAction) in
+        alert.addAction(UIAlertAction(title: String.YES, style: .default, handler: { (UIAlertAction) in
             self.initTitleAndView()
         }))
         
-        alert.addAction(UIAlertAction(title: "No", style: .default, handler: { (UIAlertAction) in
+        alert.addAction(UIAlertAction(title: String.NO, style: .default, handler: { (UIAlertAction) in
             self.showFinalScoreAlert()
         }))
         self.present(alert,animated: true, completion: nil )
     }
     
     func showFinalScoreAlert() {
-        var winMessage : String = ""
+        var winMessage = String.EMPTY
         if (rightCount > wrongCount) {
-            winMessage = "\nWe won the game! Great job!\n"
+            winMessage = String.WE_WON_THE_GAME
         } else if (wrongCount > rightCount) {
-            winMessage = "\nSorry! I'll try to do better next time.\n"
+            winMessage = String.SORRY_ILL_DO_BETTER
         } else {
-            winMessage = "\nWe did ok!\n"
+            winMessage = String.NEWLINE + String.WE_DID_OK + String.NEWLINE
         }
-        let message = "Right: " + String(self.rightCount) + "\nWrong: " + String(self.wrongCount) + winMessage + "\nThanks for playing!"
-        let alert = UIAlertController(title: "Final score", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
+        let message = String.RIGHT + String.COLON + String(self.rightCount) + String.NEWLINE + String.WRONG + String.COLON + String(self.wrongCount) + String.NEWLINE + winMessage + String.NEWLINE + String.THANKS_FOR_PLAYING
+        let alert = UIAlertController(title: String.FINAL_SCORE, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: String.OK, style: .default, handler: { (UIAlertAction) in
         }))
         self.present(alert,animated: true, completion: nil )
     }

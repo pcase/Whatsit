@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB0F571C217FC9BF00E8C47C /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0F571B217FC9BF00E8C47C /* UIImageView.swift */; };
+		DB0F571E217FD69700E8C47C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0F571D217FD69700E8C47C /* String.swift */; };
 		DBA17AC8217BCDF8008AFDE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA17AC7217BCDF8008AFDE2 /* AppDelegate.swift */; };
 		DBA17ACD217BCDF8008AFDE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA17ACB217BCDF8008AFDE2 /* Main.storyboard */; };
 		DBA17ACF217BCDFA008AFDE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA17ACE217BCDFA008AFDE2 /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DB0F571B217FC9BF00E8C47C /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		DB0F571D217FD69700E8C47C /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		DBA17AC4217BCDF8008AFDE2 /* Whatsit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whatsit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA17AC7217BCDF8008AFDE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBA17ACC217BCDF8008AFDE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,6 +95,8 @@
 				DBA17ACE217BCDFA008AFDE2 /* Assets.xcassets */,
 				DBA17AD0217BCDFA008AFDE2 /* LaunchScreen.storyboard */,
 				DBA17AD3217BCDFA008AFDE2 /* Info.plist */,
+				DB0F571B217FC9BF00E8C47C /* UIImageView.swift */,
+				DB0F571D217FD69700E8C47C /* String.swift */,
 			);
 			path = Whatsit;
 			sourceTree = "<group>";
@@ -168,6 +174,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBA17AC8217BCDF8008AFDE2 /* AppDelegate.swift in Sources */,
+				DB0F571C217FC9BF00E8C47C /* UIImageView.swift in Sources */,
+				DB0F571E217FD69700E8C47C /* String.swift in Sources */,
 				DBA17ADC217BE088008AFDE2 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
