@@ -139,10 +139,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
     func showResultAlert(win: Bool) {
         self.navigationItem.title = String.RESULTS
         var message = String.EMPTY
+        let number = Int.random(in: 0 ..< 9)
         if (win) {
-            message = String.WE_WIN
+            message = String.WE_WIN[number]
         } else {
-            message = String.I_GUESSED_WRONG
+            message = String.I_GUESSED_WRONG[number]
         }
         let alert = UIAlertController(title: String.EMPTY, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: String.OK, style: .default, handler: { (UIAlertAction) in
