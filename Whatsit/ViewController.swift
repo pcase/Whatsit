@@ -27,19 +27,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        initTitleAndView()
+        initTitleAndView(title: String.EMPTY)
         imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
         imagePicker.allowsEditing = false
         showStartAlert()
     }
     
-    func initTitleAndView() {
-        if (useCamera) {
-            navigationItem.title = String.TAKE_A_PICTURE
-        } else {
-            navigationItem.title = String.SELECT_A_PICTURE
-        }
+    func initTitleAndView(title : String) {
+        navigationItem.title = title
         imageView.image = UIImage(named: "placeholder")
     }
     
@@ -60,7 +56,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
             imageView.roundCornersForAspectFit(radius: 15)
             imagePicker.dismiss(animated: true, completion: nil)
             
-            self.navigationItem.title = String.GUESS
+            self.navigationItem.title = String.THINKING
             
             let visualRecognition = VisualRecognition(version: version, apiKey: apiKey)
             let imageData = image.jpegData(compressionQuality: 0.01)
@@ -80,6 +76,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
                 
                 DispatchQueue.main.async {
                     SVProgressHUD.dismiss()
+                    self.navigationItem.title = String.GUESS
                     self.showGuessAlert(guess: self.classificationResults[0])
                 }
             }
@@ -140,6 +137,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
     }
     
     func showResultAlert(win: Bool) {
+        self.navigationItem.title = String.RESULTS
         var message = String.EMPTY
         if (win) {
             message = String.WE_WIN
@@ -154,11 +152,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
     }
     
     func playAgainAlert() {
+        self.navigationItem.title = String.EMPTY
         let alert = UIAlertController(title: String.EMPTY, message: String.PLAY_AGAIN, preferredStyle: .alert)
         alert.isModalInPopover = true
         
         alert.addAction(UIAlertAction(title: String.YES, style: .default, handler: { (UIAlertAction) in
-            self.initTitleAndView()
+            self.initTitleAndView(title: self.useCamera ? String.TAKE_A_PICTURE : String.SELECT_A_PICTURE)
         }))
         
         alert.addAction(UIAlertAction(title: String.NO, style: .default, handler: { (UIAlertAction) in
@@ -176,7 +175,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
         } else {
             winMessage = String.NEWLINE + String.WE_DID_OK + String.NEWLINE
         }
-        let message = String.RIGHT + String.COLON + String(self.rightCount) + String.NEWLINE + String.WRONG + String.COLON + String(self.wrongCount) + String.NEWLINE + winMessage + String.NEWLINE + String.THANKS_FOR_PLAYING
+        let message = String.RIGHT + String.COLON + String(self.rightCount) + String.NEWLINE + String.WRONG + String.COLON + String(self.wrongCount) + String.NEWLINE + String.NEWLINE + winMessage + String.NEWLINE + String.NEWLINE + String.THANKS_FOR_PLAYING
         let alert = UIAlertController(title: String.FINAL_SCORE, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: String.OK, style: .default, handler: { (UIAlertAction) in
         }))
