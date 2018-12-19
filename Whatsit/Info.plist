@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>We need to use the photo library</string>
+	<string>We need to use the photo library to get images of things to identify</string>
 	<key>NSCameraUsageDescription</key>
-	<string>We need to use the camera</string>
+	<string>We need to use the camera to take pictures of things to identify</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

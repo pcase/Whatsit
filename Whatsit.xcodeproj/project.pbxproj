@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0764AC1F14532D9CD993B273 /* Pods_Whatsit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BC7EA2E819E41066CD8ADD3 /* Pods_Whatsit.framework */; };
 		DB0F571C217FC9BF00E8C47C /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0F571B217FC9BF00E8C47C /* UIImageView.swift */; };
 		DB0F571E217FD69700E8C47C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0F571D217FD69700E8C47C /* String.swift */; };
 		DBA17AC8217BCDF8008AFDE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA17AC7217BCDF8008AFDE2 /* AppDelegate.swift */; };
@@ -20,6 +21,8 @@
 		DBA17AE7217C4852008AFDE2 /* SVProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBA17AE5217C4852008AFDE2 /* SVProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DBA17AE9217C48A1008AFDE2 /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA17AE8217C48A1008AFDE2 /* RestKit.framework */; };
 		DBA17AEA217C48A1008AFDE2 /* RestKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBA17AE8217C48A1008AFDE2 /* RestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DBAF07E221BF73120011391B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAF07E121BF73120011391B /* NetworkManager.swift */; };
+		DBDAD28721BF69BF00B72B31 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBDAD28621BF69BF00B72B31 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +42,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0BC7EA2E819E41066CD8ADD3 /* Pods_Whatsit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whatsit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14955758FAC9FA5DE414F6B9 /* Pods-Whatsit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whatsit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whatsit/Pods-Whatsit.debug.xcconfig"; sourceTree = "<group>"; };
 		DB0F571B217FC9BF00E8C47C /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		DB0F571D217FD69700E8C47C /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		DBA17AC4217BCDF8008AFDE2 /* Whatsit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whatsit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +56,9 @@
 		DBA17AE1217C483E008AFDE2 /* VisualRecognitionV3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VisualRecognitionV3.framework; sourceTree = "<group>"; };
 		DBA17AE5217C4852008AFDE2 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SVProgressHUD.framework; sourceTree = "<group>"; };
 		DBA17AE8217C48A1008AFDE2 /* RestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RestKit.framework; sourceTree = "<group>"; };
+		DBAF07E121BF73120011391B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DBDAD28621BF69BF00B72B31 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		FD5B4544623BF38B077A8113 /* Pods-Whatsit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whatsit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Whatsit/Pods-Whatsit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,15 +66,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBDAD28721BF69BF00B72B31 /* SystemConfiguration.framework in Frameworks */,
 				DBA17AE6217C4852008AFDE2 /* SVProgressHUD.framework in Frameworks */,
 				DBA17AE2217C483E008AFDE2 /* VisualRecognitionV3.framework in Frameworks */,
 				DBA17AE9217C48A1008AFDE2 /* RestKit.framework in Frameworks */,
+				0764AC1F14532D9CD993B273 /* Pods_Whatsit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55802EF67D4B6F7EDAAB2623 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				14955758FAC9FA5DE414F6B9 /* Pods-Whatsit.debug.xcconfig */,
+				FD5B4544623BF38B077A8113 /* Pods-Whatsit.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DBA17ABB217BCDF8008AFDE2 = {
 			isa = PBXGroup;
 			children = (
@@ -75,6 +94,8 @@
 				DBA17AE1217C483E008AFDE2 /* VisualRecognitionV3.framework */,
 				DBA17AC6217BCDF8008AFDE2 /* Whatsit */,
 				DBA17AC5217BCDF8008AFDE2 /* Products */,
+				DBDAD28521BF69BF00B72B31 /* Frameworks */,
+				55802EF67D4B6F7EDAAB2623 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +118,18 @@
 				DBA17AD3217BCDFA008AFDE2 /* Info.plist */,
 				DB0F571B217FC9BF00E8C47C /* UIImageView.swift */,
 				DB0F571D217FD69700E8C47C /* String.swift */,
+				DBAF07E121BF73120011391B /* NetworkManager.swift */,
 			);
 			path = Whatsit;
+			sourceTree = "<group>";
+		};
+		DBDAD28521BF69BF00B72B31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBDAD28621BF69BF00B72B31 /* SystemConfiguration.framework */,
+				0BC7EA2E819E41066CD8ADD3 /* Pods_Whatsit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,10 +139,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBA17AD6217BCDFA008AFDE2 /* Build configuration list for PBXNativeTarget "Whatsit" */;
 			buildPhases = (
+				E9A69C2A2E14E3341B08D8BA /* [CP] Check Pods Manifest.lock */,
 				DBA17AC0217BCDF8008AFDE2 /* Sources */,
 				DBA17AC1217BCDF8008AFDE2 /* Frameworks */,
 				DBA17AC2217BCDF8008AFDE2 /* Resources */,
 				DBA17AE4217C483E008AFDE2 /* Embed Frameworks */,
+				7B010EA33AD6DBC283A88B27 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -168,6 +201,45 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7B010EA33AD6DBC283A88B27 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Whatsit/Pods-Whatsit-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Whatsit/Pods-Whatsit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9A69C2A2E14E3341B08D8BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Whatsit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DBA17AC0217BCDF8008AFDE2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -175,6 +247,7 @@
 			files = (
 				DBA17AC8217BCDF8008AFDE2 /* AppDelegate.swift in Sources */,
 				DB0F571C217FC9BF00E8C47C /* UIImageView.swift in Sources */,
+				DBAF07E221BF73120011391B /* NetworkManager.swift in Sources */,
 				DB0F571E217FD69700E8C47C /* String.swift in Sources */,
 				DBA17ADC217BE088008AFDE2 /* ViewController.swift in Sources */,
 			);
@@ -320,6 +393,7 @@
 		};
 		DBA17AD7217BCDFA008AFDE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14955758FAC9FA5DE414F6B9 /* Pods-Whatsit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -342,6 +416,7 @@
 		};
 		DBA17AD8217BCDFA008AFDE2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD5B4544623BF38B077A8113 /* Pods-Whatsit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
