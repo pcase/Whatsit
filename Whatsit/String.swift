@@ -43,6 +43,7 @@ extension String {
     static let NO = "No"
     static let OK = "Ok"
     static let PLAYAGAIN = "Play again"
+    static let SLOW_CONNECTION = "This will be slow. Wi-Fi will be faster."
     static let QUIT = "Quit"
     static let CANCEL = "Cancel"
     static let CONTINUE = "Continue"

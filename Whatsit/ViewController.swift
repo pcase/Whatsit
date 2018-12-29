@@ -26,12 +26,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
     var useCamera : Bool = false
     var timer:Timer?
     let network: NetworkManager = NetworkManager.sharedInstance
+    var timeoutSeconds = 20.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
     
         NetworkManager.isUnreachable { _ in
             self.showNoNetworkAlert()
+        }
+        
+        if (NetworkManager.sharedInstance.reachability).connection == .cellular {
+            timeoutSeconds = 40.0
+            showCellularAlert()
+        }
+        
+        if (NetworkManager.sharedInstance.reachability).connection == .wifi {
+           timeoutSeconds = 20.0
         }
         
         initTitleAndView(title: String.EMPTY)
@@ -110,7 +120,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
         
         SVProgressHUD.show()
         
-        timer = Timer.scheduledTimer(timeInterval: 20.0, target: self, selector: #selector(fire), userInfo: nil, repeats: false)
+        timer = Timer.scheduledTimer(timeInterval: timeoutSeconds, target: self, selector: #selector(fire), userInfo: nil, repeats: false)
         
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageView.image = image
@@ -228,6 +238,25 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
         }))
         
         present(alert, animated: true, completion: nil)
+    }
+    
+    /**
+     Displays an alert to inform the user that the response will be slow with a cellular connection
+     
+     - Parameter none:
+     
+     - Throws:
+     
+     - Returns:
+     */
+    func showCellularAlert() {
+        let alert = UIAlertController(title: String.EMPTY, message: String.SLOW_CONNECTION, preferredStyle: .alert)
+        alert.isModalInPopover = true
+        
+        alert.addAction(UIAlertAction(title: String.OK, style: .default, handler: { (UIAlertAction) in
+            self.pickImageSourceAlert()
+        }))
+        self.present(alert,animated: true, completion: nil )
     }
     
     /**
