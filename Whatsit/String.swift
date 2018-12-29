@@ -14,7 +14,7 @@ extension String {
     static let SELECT_A_PICTURE = "Select a Picture"
     static let THINKING = "Thinking hard..."
     static let GUESS = "Taking a guess"
-    static let LETS_PLAY = "I'm an artificial intelligence being. Want to see how smart I am? \n\nYou take a picture, and I'll guess what it is"
+    static let LETS_PLAY = "I'm an artificial intelligence being. Want to see how smart I am? \n\nYou show me a picture, and I'll guess what it is"
     static let CAMERA_OR_PHOTO = "Camera or photo library?"
     static let CAMERA = "Camera"
     static let PHOTO_LIBRARY = "Photo library"
@@ -26,7 +26,7 @@ extension String {
                                   "You tried to trick me, but I'm too smart for you!",
                                   "That was a good one!",
                                   "For a second there, you had me worried, but I figured it out",
-                                  "I guess I did a gogd job of machine learning",
+                                  "I guess I did a good job of machine learning",
                                   "I got it!"]
     static let I_GUESSED_WRONG:[String] = ["I was wrong! I guess \"artificial intelligence\" isn't as good as real intelligence!",
                                            "I'm not so smart after all!",
@@ -34,7 +34,7 @@ extension String {
                                            "I should get some real intelligence",
                                            "You fooled me!",
                                            "That must have been a bad picture",
-                                           "What was that supposed to be",
+                                           "What was that supposed to be?",
                                            "That was too hard for me",
                                            "It's not my fault. That was a bad picture!",
                                            "Mom was right. I should have studied more"]
