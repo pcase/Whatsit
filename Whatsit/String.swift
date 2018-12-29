@@ -42,6 +42,8 @@ extension String {
     static let YES = "Yes"
     static let NO = "No"
     static let OK = "Ok"
+    static let PLAYAGAIN = "Play again"
+    static let QUIT = "Quit"
     static let CANCEL = "Cancel"
     static let CONTINUE = "Continue"
     static let PLAY_AGAIN = "Do you want to play again?"

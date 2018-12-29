@@ -53,7 +53,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
      */
     func initTitleAndView(title : String) {
         navigationItem.title = title
-        imageView.image = UIImage(named: "placeholder")
+        imageView.image = UIImage(named: "azurehorsecreations")
     }
     
     /**
@@ -359,7 +359,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
      
      - Returns:
      */
-    func showResultAlert(win: Bool) {
+    func showResultAlert1(win: Bool) {
         self.navigationItem.title = String.RESULTS
         var message = String.EMPTY
         let number = Int.random(in: 0 ..< 9)
@@ -371,6 +371,34 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
         let alert = UIAlertController(title: String.EMPTY, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: String.OK, style: .default, handler: { (UIAlertAction) in
             self.playAgainAlert()
+        }))
+        self.present(alert,animated: true, completion: nil )
+    }
+    
+    /**
+     Displays an alert to show the results
+     
+     - Parameter win: boolean value, true = win, false = lose
+     
+     - Throws:
+     
+     - Returns:
+     */
+    func showResultAlert(win: Bool) {
+        self.navigationItem.title = String.RESULTS
+        var message = String.EMPTY
+        let number = Int.random(in: 0 ..< 9)
+        if (win) {
+            message = String.WE_WIN[number]
+        } else {
+            message = String.I_GUESSED_WRONG[number]
+        }
+        let alert = UIAlertController(title: String.EMPTY, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: String.PLAYAGAIN, style: .default, handler: { (UIAlertAction) in
+            self.initTitleAndView(title: self.useCamera ? String.TAKE_A_PICTURE : String.SELECT_A_PICTURE)
+        }))
+        alert.addAction(UIAlertAction(title: String.QUIT, style: .default, handler: { (UIAlertAction) in
+            self.showFinalScoreAlert()
         }))
         self.present(alert,animated: true, completion: nil )
     }
