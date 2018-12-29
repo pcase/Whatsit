@@ -14,7 +14,6 @@ import Reachability
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UINavigationControllerDelegate {
     
-    @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var imageView: UIImageView!
     
     let imagePicker = UIImagePickerController()
@@ -148,16 +147,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
     }
 
     /**
-    Called when camera icon is tapped. Checks camera permission, and displays image.
+    Called after image source is specified. If camera is chosen, camera permission is checked, and if allowed, the camera
+     is displayed. If photo library is chosen, the photo library is displayed.
      
-     - Parameter sender:
+     - Parameter none:
      
      - Throws:
      
      - Returns:
      */
-    @IBAction func cameraTapped(_ sender: UIBarButtonItem) {
-        self.checkCameraPermission()
+    func getImage() {
+        if (self.useCamera) {
+            self.checkCameraPermission()
+        }
         
         self.navigationItem.title = String.EMPTY
         imagePicker.allowsEditing = false
@@ -279,12 +281,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
             self.imagePicker.sourceType = .camera
             self.useCamera = true
             self.navigationItem.title = String.TAKE_A_PICTURE
+            self.getImage()
         }))
         
         alert.addAction(UIAlertAction(title: String.PHOTO_LIBRARY, style: .default, handler: { (UIAlertAction) in
             self.imagePicker.sourceType = .photoLibrary
             self.useCamera = false
             self.navigationItem.title = String.SELECT_A_PICTURE
+            self.getImage()
         }))
         self.present(alert,animated: true, completion: nil )
     }
@@ -359,31 +363,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
      
      - Returns:
      */
-    func showResultAlert1(win: Bool) {
-        self.navigationItem.title = String.RESULTS
-        var message = String.EMPTY
-        let number = Int.random(in: 0 ..< 9)
-        if (win) {
-            message = String.WE_WIN[number]
-        } else {
-            message = String.I_GUESSED_WRONG[number]
-        }
-        let alert = UIAlertController(title: String.EMPTY, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: String.OK, style: .default, handler: { (UIAlertAction) in
-            self.playAgainAlert()
-        }))
-        self.present(alert,animated: true, completion: nil )
-    }
-    
-    /**
-     Displays an alert to show the results
-     
-     - Parameter win: boolean value, true = win, false = lose
-     
-     - Throws:
-     
-     - Returns:
-     */
     func showResultAlert(win: Bool) {
         self.navigationItem.title = String.RESULTS
         var message = String.EMPTY
@@ -395,7 +374,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
         }
         let alert = UIAlertController(title: String.EMPTY, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: String.PLAYAGAIN, style: .default, handler: { (UIAlertAction) in
-            self.initTitleAndView(title: self.useCamera ? String.TAKE_A_PICTURE : String.SELECT_A_PICTURE)
+            self.getImage()
         }))
         alert.addAction(UIAlertAction(title: String.QUIT, style: .default, handler: { (UIAlertAction) in
             self.showFinalScoreAlert()
