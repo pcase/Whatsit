@@ -32,7 +32,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
         super.viewDidLoad()
     
         NetworkManager.isUnreachable { _ in
-            self.showNoNetworkAlert()
+            self.showSettingsAlert()
         }
         
         if (NetworkManager.sharedInstance.reachability).connection == .cellular {
@@ -225,15 +225,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
         let settingsAppURL = URL(string: UIApplication.openSettingsURLString)!
         
         let alert = UIAlertController(
-            title: "Need Camera Access",
-            message: "Camera access is required to make full use of this app.",
+            title: String.NEED_CAMERA,
+            message: String.CAMERA_ACCESS_REQUIRED,
             preferredStyle: UIAlertController.Style.alert
         )
         
-        alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: { (action) in
+        alert.addAction(UIAlertAction(title: String.CANCEL, style: .default, handler: { (action) in
             self.noCameraAlert()
         }))
-        alert.addAction(UIAlertAction(title: "Allow Camera", style: .cancel, handler: { (alert) -> Void in
+        alert.addAction(UIAlertAction(title: String.ALLOW_CAMERA, style: .cancel, handler: { (alert) -> Void in
             UIApplication.shared.open(settingsAppURL, options: [:], completionHandler: nil)
         }))
         
@@ -357,13 +357,43 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
      - Returns:
      */
     func showTimeoutAlert() {
-        let alert = UIAlertController(title: String.EMPTY, message: "I give up. I have NO idea what that is!", preferredStyle: .alert)
+        let alert = UIAlertController(title: String.EMPTY, message: String.GIVE_UP, preferredStyle: .alert)
         alert.isModalInPopover = true
         self.wrongCount += 1
         alert.addAction(UIAlertAction(title: String.OK, style: .default, handler: { (UIAlertAction) in
             self.playAgainAlert()
         }))
         self.present(alert,animated: true, completion: nil )
+    }
+    
+    /**
+     Displays an alert to enable the user to go to Settings to turn on Wi-Fi
+     
+     - Parameter none:
+     
+     - Throws:
+     
+     - Returns:
+     */
+    func showSettingsAlert() {
+        let alertController = UIAlertController (title: String.EMPTY, message: String.REQUIRES_INTERNET_AND_GO_TO_SETTINGS, preferredStyle: .alert)
+        
+        let settingsAction = UIAlertAction(title: String.SETTINGS, style: .default) { (_) -> Void in
+            
+            guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+                return
+            }
+            
+            if UIApplication.shared.canOpenURL(settingsUrl) {
+                UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                    self.pickImageSourceAlert()
+                })
+            }
+        }
+        alertController.addAction(settingsAction)
+        let cancelAction = UIAlertAction(title: String.CANCEL, style: .default, handler: nil)
+        alertController.addAction(cancelAction)
+        self.present(alertController, animated: true, completion: nil)
     }
     
     /**
@@ -376,7 +406,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
      - Returns:
      */
     func showNoNetworkAlert() {
-        let alert = UIAlertController(title: String.EMPTY, message: "Whatsit requires an internet connection", preferredStyle: .alert)
+        let alert = UIAlertController(title: String.EMPTY, message: String.REQUIRES_INTERNET, preferredStyle: .alert)
         alert.isModalInPopover = true
         alert.addAction(UIAlertAction(title: String.OK, style: .default, handler: { (UIAlertAction) in
         }))
@@ -470,7 +500,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
      - Returns:
      */
     func noCameraAlert() {
-        let alert = UIAlertController(title: String.EMPTY, message: "Using photo library instead", preferredStyle: .alert)
+        let alert = UIAlertController(title: String.EMPTY, message: String.USING_PHOTO_LIBRARY, preferredStyle: .alert)
         alert.isModalInPopover = true
         alert.addAction(UIAlertAction(title: String.OK, style: .default, handler: { (action) in
             self.usePhotoLibrary()
