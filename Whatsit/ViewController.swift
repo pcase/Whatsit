@@ -30,7 +30,42 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        checkNetwork()
+        initAndStart()
+    }
     
+    @objc func applicationDidBecomeActive() {
+        checkNetwork()
+        initAndStart()
+    }
+    
+    override func viewWillAppear(_ animated: Bool){
+        super.viewWillAppear(animated)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(applicationDidBecomeActive),
+                                               name: UIApplication.didBecomeActiveNotification, object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool){
+        super.viewWillDisappear(animated)
+        
+        if self.navigationController!.viewControllers.contains(self) == false {
+            NotificationCenter.default.removeObserver(self, name:UIApplication.didBecomeActiveNotification, object:nil);
+        }
+    }
+    
+    /**
+     Checks for internet connection. Checks for cellular and Wi-Fi, and sets timeouts.
+     
+     - Parameter none:
+     
+     - Throws:
+     
+     - Returns:
+     */
+    func checkNetwork() {
         NetworkManager.isUnreachable { _ in
             self.showSettingsAlert()
         }
@@ -41,9 +76,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
         }
         
         if (NetworkManager.sharedInstance.reachability).connection == .wifi {
-           timeoutSeconds = 20.0
+            timeoutSeconds = 20.0
         }
-        
+    }
+    
+    /**
+     Initializes title of view, initializes image picker and displays start alert.
+     
+     - Parameter none:
+     
+     - Throws:
+     
+     - Returns:
+     */
+    func initAndStart() {
         initTitleAndView(title: String.EMPTY)
         imagePicker.delegate = self
         imagePicker.sourceType = .photoLibrary
@@ -101,7 +147,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
      
      - Returns:
      */
-    @objc func fire() {
+    @objc func timeout() {
         stopProgressAndTimer()
         showTimeoutAlert()
     }
@@ -118,9 +164,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
      */
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
+        NetworkManager.isUnreachable { _ in
+            self.showSettingsAlert()
+        }
+        
         SVProgressHUD.show()
         
-        timer = Timer.scheduledTimer(timeInterval: timeoutSeconds, target: self, selector: #selector(fire), userInfo: nil, repeats: false)
+        timer = Timer.scheduledTimer(timeInterval: timeoutSeconds, target: self, selector: #selector(timeout), userInfo: nil, repeats: false)
         
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageView.image = image
@@ -204,7 +254,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
         // denied - The user has previously denied access.
         // restricted - The user can't grant access due to restrictions.
         case .denied, .restricted:
-            self.alertCameraAccessNeeded()
+            self.cameraAccessNeededAlert()
             return
             
         default:
@@ -221,7 +271,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
      
      - Returns:
      */
-    func alertCameraAccessNeeded() {
+    func cameraAccessNeededAlert() {
         let settingsAppURL = URL(string: UIApplication.openSettingsURLString)!
         
         let alert = UIAlertController(
