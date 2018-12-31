@@ -43,6 +43,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
     override func viewWillAppear(_ animated: Bool){
         super.viewWillAppear(animated)
         
+        // Add observer to detect when application becomes active
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(applicationDidBecomeActive),
                                                name: UIApplication.didBecomeActiveNotification, object: nil)
@@ -51,6 +52,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
     override func viewWillDisappear(_ animated: Bool){
         super.viewWillDisappear(animated)
         
+        // Remove observer
         if self.navigationController!.viewControllers.contains(self) == false {
             NotificationCenter.default.removeObserver(self, name:UIApplication.didBecomeActiveNotification, object:nil);
         }
@@ -66,22 +68,26 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
      - Returns:
      */
     func checkNetwork() {
+        
+        // If there is no network connection, open Settings
         NetworkManager.isUnreachable { _ in
             self.showSettingsAlert()
         }
         
+        // If on cellular network, set longer timeout and tell user it's slow
         if (NetworkManager.sharedInstance.reachability).connection == .cellular {
             timeoutSeconds = 40.0
             showCellularAlert()
         }
         
+        // If on Wi-Fi, set timeout
         if (NetworkManager.sharedInstance.reachability).connection == .wifi {
             timeoutSeconds = 20.0
         }
     }
     
     /**
-     Initializes title of view, initializes image picker and displays start alert.
+     Initializes title and default view, initializes image picker and displays start alert.
      
      - Parameter none:
      
@@ -153,7 +159,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
     }
     
     /**
-      Attempts to classify the image
+      Performs image recognition
      
      - Parameter picker:
                 info:
@@ -164,14 +170,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
      */
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
+        // Check for network connection
         NetworkManager.isUnreachable { _ in
             self.showSettingsAlert()
         }
         
+        // Display progress spinner
         SVProgressHUD.show()
         
+        // Set timer
         timer = Timer.scheduledTimer(timeInterval: timeoutSeconds, target: self, selector: #selector(timeout), userInfo: nil, repeats: false)
         
+        // Do image recognition
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageView.image = image
             imageView.roundCornersForAspectFit(radius: 15)
@@ -217,6 +227,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
      - Returns:
      */
     func getImage() {
+        
+        // Check camera permission
         if (self.useCamera) {
             self.checkCameraPermission()
         }
