@@ -8,7 +8,7 @@
 
 import AVFoundation
 import UIKit
-import VisualRecognitionV3
+import VisualRecognition
 import SVProgressHUD
 import Reachability
 
@@ -216,6 +216,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
         }
     }
 
+    /**
+      Dismisses image picker when user selects Cancel. Displays starting alert.
+     
+     - Parameter picker:
+                info:
+     
+     - Throws:
+     
+     - Returns:
+     */
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        print("You hit Cancel")
+        imagePicker.dismiss(animated: true) {
+            self.playAgainAlert()
+        }
+    }
+    
     /**
     Called after image source is specified. If camera is chosen, camera permission is checked, and if allowed, the camera
      is displayed. If photo library is chosen, the photo library is displayed.
@@ -495,7 +512,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
         }
         let alert = UIAlertController(title: String.EMPTY, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: String.PLAYAGAIN, style: .default, handler: { (UIAlertAction) in
-            self.getImage()
+            self.pickImageSourceAlert()
         }))
         alert.addAction(UIAlertAction(title: String.QUIT, style: .default, handler: { (UIAlertAction) in
             self.showFinalScoreAlert()
@@ -518,7 +535,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
         alert.isModalInPopover = true
         
         alert.addAction(UIAlertAction(title: String.YES, style: .default, handler: { (UIAlertAction) in
-            self.initTitleAndView(title: self.useCamera ? String.TAKE_A_PICTURE : String.SELECT_A_PICTURE)
+//            self.initTitleAndView(title: self.useCamera ? String.TAKE_A_PICTURE : String.SELECT_A_PICTURE)
+            self.pickImageSourceAlert()
         }))
         
         alert.addAction(UIAlertAction(title: String.NO, style: .default, handler: { (UIAlertAction) in

@@ -3,18 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		DB0F571C217FC9BF00E8C47C /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0F571B217FC9BF00E8C47C /* UIImageView.swift */; };
 		DB0F571E217FD69700E8C47C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0F571D217FD69700E8C47C /* String.swift */; };
-		DB65321C21CC7E85003CBED4 /* RestKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DB2E675C21CB3AC90026CBE3 /* RestKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DB3DCA1123BC1E200062C952 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB3DCA1023BC1E200062C952 /* GoogleService-Info.plist */; };
 		DB65321E21CC7E8C003CBED4 /* SVProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBA17AE5217C4852008AFDE2 /* SVProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DB65322021CC7F14003CBED4 /* Pods_Whatsit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB65321F21CC7F14003CBED4 /* Pods_Whatsit.framework */; };
 		DB65322221CC7F18003CBED4 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB65322121CC7F18003CBED4 /* Reachability.framework */; };
-		DB65322321CC81F6003CBED4 /* VisualRecognitionV3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBA17AE1217C483E008AFDE2 /* VisualRecognitionV3.framework */; };
-		DB65322421CC81F6003CBED4 /* VisualRecognitionV3.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBA17AE1217C483E008AFDE2 /* VisualRecognitionV3.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DBA17AC8217BCDF8008AFDE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA17AC7217BCDF8008AFDE2 /* AppDelegate.swift */; };
 		DBA17ACD217BCDF8008AFDE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA17ACB217BCDF8008AFDE2 /* Main.storyboard */; };
 		DBA17ACF217BCDFA008AFDE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA17ACE217BCDFA008AFDE2 /* Assets.xcassets */; };
@@ -31,8 +29,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				DB65321E21CC7E8C003CBED4 /* SVProgressHUD.framework in Embed Frameworks */,
-				DB65322421CC81F6003CBED4 /* VisualRecognitionV3.framework in Embed Frameworks */,
-				DB65321C21CC7E85003CBED4 /* RestKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,6 +41,7 @@
 		DB0F571B217FC9BF00E8C47C /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		DB0F571D217FD69700E8C47C /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		DB2E675C21CB3AC90026CBE3 /* RestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RestKit.framework; sourceTree = "<group>"; };
+		DB3DCA1023BC1E200062C952 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DB65321F21CC7F14003CBED4 /* Pods_Whatsit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Whatsit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB65322121CC7F18003CBED4 /* Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBA17AC4217BCDF8008AFDE2 /* Whatsit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whatsit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,10 +51,11 @@
 		DBA17AD1217BCDFA008AFDE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DBA17AD3217BCDFA008AFDE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBA17ADB217BE088008AFDE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DBA17AE1217C483E008AFDE2 /* VisualRecognitionV3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VisualRecognitionV3.framework; sourceTree = "<group>"; };
 		DBA17AE5217C4852008AFDE2 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SVProgressHUD.framework; sourceTree = "<group>"; };
 		DBAF07E121BF73120011391B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		DBDAD28621BF69BF00B72B31 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DBEE59F123B941DC008387CF /* VisualRecognition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VisualRecognition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBEE59F423B94354008387CF /* VisualRecognition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VisualRecognition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD5B4544623BF38B077A8113 /* Pods-Whatsit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whatsit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Whatsit/Pods-Whatsit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,7 +65,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB65322221CC7F18003CBED4 /* Reachability.framework in Frameworks */,
-				DB65322321CC81F6003CBED4 /* VisualRecognitionV3.framework in Frameworks */,
 				DB65322021CC7F14003CBED4 /* Pods_Whatsit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -89,7 +86,6 @@
 			children = (
 				DB2E675C21CB3AC90026CBE3 /* RestKit.framework */,
 				DBA17AE5217C4852008AFDE2 /* SVProgressHUD.framework */,
-				DBA17AE1217C483E008AFDE2 /* VisualRecognitionV3.framework */,
 				DBA17AC6217BCDF8008AFDE2 /* Whatsit */,
 				DBA17AC5217BCDF8008AFDE2 /* Products */,
 				DBDAD28521BF69BF00B72B31 /* Frameworks */,
@@ -113,6 +109,7 @@
 				DBA17ACB217BCDF8008AFDE2 /* Main.storyboard */,
 				DBA17ACE217BCDFA008AFDE2 /* Assets.xcassets */,
 				DBA17AD0217BCDFA008AFDE2 /* LaunchScreen.storyboard */,
+				DB3DCA1023BC1E200062C952 /* GoogleService-Info.plist */,
 				DBA17AD3217BCDFA008AFDE2 /* Info.plist */,
 				DB0F571B217FC9BF00E8C47C /* UIImageView.swift */,
 				DB0F571D217FD69700E8C47C /* String.swift */,
@@ -124,6 +121,8 @@
 		DBDAD28521BF69BF00B72B31 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DBEE59F423B94354008387CF /* VisualRecognition.framework */,
+				DBEE59F123B941DC008387CF /* VisualRecognition.framework */,
 				DB65322121CC7F18003CBED4 /* Reachability.framework */,
 				DB65321F21CC7F14003CBED4 /* Pods_Whatsit.framework */,
 				DBDAD28621BF69BF00B72B31 /* SystemConfiguration.framework */,
@@ -195,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBA17AD2217BCDFA008AFDE2 /* LaunchScreen.storyboard in Resources */,
+				DB3DCA1123BC1E200062C952 /* GoogleService-Info.plist in Resources */,
 				DBA17ACF217BCDFA008AFDE2 /* Assets.xcassets in Resources */,
 				DBA17ACD217BCDF8008AFDE2 /* Main.storyboard in Resources */,
 			);
@@ -208,17 +208,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Whatsit/Pods-Whatsit-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Whatsit/Pods-Whatsit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Whatsit/Pods-Whatsit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Whatsit/Pods-Whatsit-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Whatsit/Pods-Whatsit-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DB65322521CC85CA003CBED4 /* ShellScript */ = {
@@ -416,8 +415,8 @@
 			baseConfigurationReference = 14955758FAC9FA5DE414F6B9 /* Pods-Whatsit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Distribution: Patty Case (92S6VPY8H9)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 92S6VPY8H9;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -430,10 +429,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.azurehorsecreations.Whatsit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				PROVISIONING_PROFILE_SPECIFIER = AzureHorseAppStoreProfile;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -443,8 +443,8 @@
 			baseConfigurationReference = FD5B4544623BF38B077A8113 /* Pods-Whatsit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "Apple Distribution: Patty Case (92S6VPY8H9)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 92S6VPY8H9;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -457,10 +457,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.azurehorsecreations.Whatsit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				PROVISIONING_PROFILE_SPECIFIER = AzureHorseAppStoreProfile;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
