@@ -1,4 +1,4 @@
-//
+//I'
 //  ViewController.swift
 //  Whatsit
 //
@@ -330,7 +330,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
      */
     func showCellularAlert() {
         let alert = UIAlertController(title: String.EMPTY, message: String.SLOW_CONNECTION, preferredStyle: .alert)
-        alert.isModalInPopover = true
+
+        if #available(iOS 13, *) {
+            alert.isModalInPresentation = true
+        } else {
+            alert.isModalInPopover = true
+        }
         
         alert.addAction(UIAlertAction(title: String.OK, style: .default, handler: { (UIAlertAction) in
             self.pickImageSourceAlert()
@@ -364,7 +369,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
      */
     func showStartAlert() {
         let alert = UIAlertController(title: String.EMPTY, message: String.LETS_PLAY, preferredStyle: .alert)
-        alert.isModalInPopover = true
+        
+        if #available(iOS 13, *) {
+            alert.isModalInPresentation = true
+        } else {
+            alert.isModalInPopover = true
+        }
         
         alert.addAction(UIAlertAction(title: String.OK, style: .default, handler: { (UIAlertAction) in
             self.pickImageSourceAlert()
@@ -383,7 +393,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
      */
     func pickImageSourceAlert() {
         let alert = UIAlertController(title: String.EMPTY, message: String.CAMERA_OR_PHOTO, preferredStyle: .alert)
-        alert.isModalInPopover = true
+       
+        if #available(iOS 13, *) {
+            alert.isModalInPresentation = true
+        } else {
+            alert.isModalInPopover = true
+        }
         
         alert.addAction(UIAlertAction(title: String.CAMERA, style: .default, handler: { (UIAlertAction) in
             self.imagePicker.sourceType = .camera
@@ -404,15 +419,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
     /**
      Displays an alert to show the guess
      
-     - Parameter guess: string representing the guess
-     
-     - Throws:
+     - Parameter gue
+ss: string representing the guess
+         - Throws:
      
      - Returns:
      */
     func showGuessAlert(guess: String) {
         let alert = UIAlertController(title: String.EMPTY, message: String.IS_IT + String.SPACE + String.DOUBLE_QUOTE + guess + String.DOUBLE_QUOTE, preferredStyle: .alert)
-        alert.isModalInPopover = true
+        
+        if #available(iOS 13, *) {
+            alert.isModalInPresentation = true
+        } else {
+            alert.isModalInPopover = true
+        }
         
         alert.addAction(UIAlertAction(title: String.YES, style: .default, handler: { (UIAlertAction) in
             self.rightCount += 1
@@ -437,7 +457,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
      */
     func showTimeoutAlert() {
         let alert = UIAlertController(title: String.EMPTY, message: String.GIVE_UP, preferredStyle: .alert)
-        alert.isModalInPopover = true
+        
+        if #available(iOS 13, *) {
+            alert.isModalInPresentation = true
+        } else {
+            alert.isModalInPopover = true
+        }
+        
         self.wrongCount += 1
         alert.addAction(UIAlertAction(title: String.OK, style: .default, handler: { (UIAlertAction) in
             self.playAgainAlert()
@@ -486,7 +512,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
      */
     func showNoNetworkAlert() {
         let alert = UIAlertController(title: String.EMPTY, message: String.REQUIRES_INTERNET, preferredStyle: .alert)
-        alert.isModalInPopover = true
+
+        if #available(iOS 13, *) {
+            alert.isModalInPresentation = true
+        } else {
+            alert.isModalInPopover = true
+        }
+        
         alert.addAction(UIAlertAction(title: String.OK, style: .default, handler: { (UIAlertAction) in
         }))
         self.present(alert,animated: true, completion: nil )
@@ -532,7 +564,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
     func playAgainAlert() {
         self.navigationItem.title = String.EMPTY
         let alert = UIAlertController(title: String.EMPTY, message: String.PLAY_AGAIN, preferredStyle: .alert)
-        alert.isModalInPopover = true
+
+        if #available(iOS 13, *) {
+            alert.isModalInPresentation = true
+        } else {
+            alert.isModalInPopover = true
+        }
         
         alert.addAction(UIAlertAction(title: String.YES, style: .default, handler: { (UIAlertAction) in
 //            self.initTitleAndView(title: self.useCamera ? String.TAKE_A_PICTURE : String.SELECT_A_PICTURE)
@@ -581,7 +618,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UIPicke
      */
     func noCameraAlert() {
         let alert = UIAlertController(title: String.EMPTY, message: String.USING_PHOTO_LIBRARY, preferredStyle: .alert)
-        alert.isModalInPopover = true
+        
+        if #available(iOS 13, *) {
+            alert.isModalInPresentation = true
+        } else {
+            alert.isModalInPopover = true
+        }
+        
         alert.addAction(UIAlertAction(title: String.OK, style: .default, handler: { (action) in
             self.usePhotoLibrary()
         }))

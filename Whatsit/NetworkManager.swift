@@ -22,22 +22,26 @@ class NetworkManager: NSObject {
     override init() {
         super.init()
         
-        // Initialise reachability
-        reachability = Reachability()!
-        
-        // Register an observer for the network status
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(networkStatusChanged(_:)),
-            name: .reachabilityChanged,
-            object: reachability
-        )
-        
         do {
-            // Start the network status notifier
-            try reachability.startNotifier()
+            // Initialise reachability
+            try reachability = Reachability()
+            
+            // Register an observer for the network status
+            NotificationCenter.default.addObserver(
+                self,
+                selector: #selector(networkStatusChanged(_:)),
+                name: .reachabilityChanged,
+                object: reachability
+            )
+            
+            do {
+                // Start the network status notifier
+                try reachability.startNotifier()
+            } catch {
+                print("Unable to start notifier")
+            }
         } catch {
-            print("Unable to start notifier")
+            print("Unable to initialize Reachability")
         }
     }
     
