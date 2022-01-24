@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1010"
+   LastUpgradeVersion = "1320"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DBA17AC3217BCDF8008AFDE2"
-               BuildableName = "Whatsit.app"
-               BlueprintName = "Whatsit"
-               ReferencedContainer = "container:Whatsit.xcodeproj">
+               BlueprintIdentifier = "DBCC786C2762C108009323A5"
+               BuildableName = "WhatsIt.app"
+               BlueprintName = "WhatsIt"
+               ReferencedContainer = "container:WhatsIt.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,18 +28,27 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DBCC787C2762C10A009323A5"
+               BuildableName = "WhatsItTests.xctest"
+               BlueprintName = "WhatsItTests"
+               ReferencedContainer = "container:WhatsIt.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "DBCC78862762C10A009323A5"
+               BuildableName = "WhatsItUITests.xctest"
+               BlueprintName = "WhatsItUITests"
+               ReferencedContainer = "container:WhatsIt.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DBA17AC3217BCDF8008AFDE2"
-            BuildableName = "Whatsit.app"
-            BlueprintName = "Whatsit"
-            ReferencedContainer = "container:Whatsit.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       buildConfiguration = "Debug"
@@ -55,14 +64,12 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DBA17AC3217BCDF8008AFDE2"
-            BuildableName = "Whatsit.app"
-            BlueprintName = "Whatsit"
-            ReferencedContainer = "container:Whatsit.xcodeproj">
+            BlueprintIdentifier = "DBCC786C2762C108009323A5"
+            BuildableName = "WhatsIt.app"
+            BlueprintName = "WhatsIt"
+            ReferencedContainer = "container:WhatsIt.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <AdditionalOptions>
-      </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -74,10 +81,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DBA17AC3217BCDF8008AFDE2"
-            BuildableName = "Whatsit.app"
-            BlueprintName = "Whatsit"
-            ReferencedContainer = "container:Whatsit.xcodeproj">
+            BlueprintIdentifier = "DBCC786C2762C108009323A5"
+            BuildableName = "WhatsIt.app"
+            BlueprintName = "WhatsIt"
+            ReferencedContainer = "container:WhatsIt.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

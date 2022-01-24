@@ -4,15 +4,28 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Whatsit.xcscheme</key>
+		<key>WhatsIt.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>Whatsit.xcscheme_^#shared#^_</key>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>DBCC786C2762C108009323A5</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DBCC787C2762C10A009323A5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DBCC78862762C10A009323A5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

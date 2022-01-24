@@ -3,303 +3,329 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DB0F571C217FC9BF00E8C47C /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0F571B217FC9BF00E8C47C /* UIImageView.swift */; };
-		DB0F571E217FD69700E8C47C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0F571D217FD69700E8C47C /* String.swift */; };
-		DB3DCA1123BC1E200062C952 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB3DCA1023BC1E200062C952 /* GoogleService-Info.plist */; };
-		DB65321E21CC7E8C003CBED4 /* SVProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DBA17AE5217C4852008AFDE2 /* SVProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DB65322021CC7F14003CBED4 /* Pods_Whatsit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB65321F21CC7F14003CBED4 /* Pods_Whatsit.framework */; };
-		DB65322221CC7F18003CBED4 /* Reachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB65322121CC7F18003CBED4 /* Reachability.framework */; };
-		DBA17AC8217BCDF8008AFDE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA17AC7217BCDF8008AFDE2 /* AppDelegate.swift */; };
-		DBA17ACD217BCDF8008AFDE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA17ACB217BCDF8008AFDE2 /* Main.storyboard */; };
-		DBA17ACF217BCDFA008AFDE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBA17ACE217BCDFA008AFDE2 /* Assets.xcassets */; };
-		DBA17AD2217BCDFA008AFDE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBA17AD0217BCDFA008AFDE2 /* LaunchScreen.storyboard */; };
-		DBA17ADC217BE088008AFDE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA17ADB217BE088008AFDE2 /* ViewController.swift */; };
-		DBAF07E221BF73120011391B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAF07E121BF73120011391B /* NetworkManager.swift */; };
+		DBCC78712762C108009323A5 /* WhatsItApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCC78702762C108009323A5 /* WhatsItApp.swift */; };
+		DBCC78732762C108009323A5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCC78722762C108009323A5 /* ContentView.swift */; };
+		DBCC78752762C109009323A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBCC78742762C109009323A5 /* Assets.xcassets */; };
+		DBCC78782762C109009323A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBCC78772762C109009323A5 /* Preview Assets.xcassets */; };
+		DBCC78822762C10A009323A5 /* WhatsItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCC78812762C10A009323A5 /* WhatsItTests.swift */; };
+		DBCC788C2762C10A009323A5 /* WhatsItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCC788B2762C10A009323A5 /* WhatsItUITests.swift */; };
+		DBCC788E2762C10A009323A5 /* WhatsitUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCC788D2762C10A009323A5 /* WhatsitUITestsLaunchTests.swift */; };
+		DBCC789B2762CB5E009323A5 /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = DBCC789A2762CB5E009323A5 /* MobileNetV2.mlmodel */; };
+		DBCC789D2762D09B009323A5 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCC789C2762D09B009323A5 /* UIImage+Extension.swift */; };
+		DBDB8E5A279DB2D700815FFD /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDB8E59279DB2D700815FFD /* SplashView.swift */; };
+		DBEC87BD2765996E00FC0427 /* ClassifyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC87BC2765996E00FC0427 /* ClassifyViewModel.swift */; };
+		DBEC87C12765A6AE00FC0427 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC87C02765A6AE00FC0427 /* ImagePicker.swift */; };
+		DBEC87C32765A7C300FC0427 /* ClassifyImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBEC87C22765A7C300FC0427 /* ClassifyImageView.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		DB65321A21CC7E6E003CBED4 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				DB65321E21CC7E8C003CBED4 /* SVProgressHUD.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
+/* Begin PBXContainerItemProxy section */
+		DBCC787E2762C10A009323A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBCC78652762C108009323A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBCC786C2762C108009323A5;
+			remoteInfo = WhatsItCoreML;
 		};
-/* End PBXCopyFilesBuildPhase section */
+		DBCC78882762C10A009323A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DBCC78652762C108009323A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBCC786C2762C108009323A5;
+			remoteInfo = WhatsItCoreML;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0BC7EA2E819E41066CD8ADD3 /* Pods_Whatsit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whatsit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		14955758FAC9FA5DE414F6B9 /* Pods-Whatsit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whatsit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whatsit/Pods-Whatsit.debug.xcconfig"; sourceTree = "<group>"; };
-		DB0F571B217FC9BF00E8C47C /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
-		DB0F571D217FD69700E8C47C /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		DB2E675C21CB3AC90026CBE3 /* RestKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RestKit.framework; sourceTree = "<group>"; };
-		DB3DCA1023BC1E200062C952 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		DB65321F21CC7F14003CBED4 /* Pods_Whatsit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Whatsit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB65322121CC7F18003CBED4 /* Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Reachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBA17AC4217BCDF8008AFDE2 /* Whatsit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whatsit.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBA17AC7217BCDF8008AFDE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DBA17ACC217BCDF8008AFDE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DBA17ACE217BCDFA008AFDE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DBA17AD1217BCDFA008AFDE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DBA17AD3217BCDFA008AFDE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DBA17ADB217BE088008AFDE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DBA17AE5217C4852008AFDE2 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SVProgressHUD.framework; sourceTree = "<group>"; };
-		DBAF07E121BF73120011391B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		DBDAD28621BF69BF00B72B31 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		DBEE59F123B941DC008387CF /* VisualRecognition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VisualRecognition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBEE59F423B94354008387CF /* VisualRecognition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VisualRecognition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FD5B4544623BF38B077A8113 /* Pods-Whatsit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whatsit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Whatsit/Pods-Whatsit.release.xcconfig"; sourceTree = "<group>"; };
+		DBCC786D2762C108009323A5 /* Whatsit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whatsit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBCC78702762C108009323A5 /* WhatsItApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsItApp.swift; sourceTree = "<group>"; };
+		DBCC78722762C108009323A5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DBCC78742762C109009323A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DBCC78772762C109009323A5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DBCC787D2762C10A009323A5 /* WhatsItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhatsItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBCC78812762C10A009323A5 /* WhatsItTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsItTests.swift; sourceTree = "<group>"; };
+		DBCC78872762C10A009323A5 /* WhatsItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhatsItUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBCC788B2762C10A009323A5 /* WhatsItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsItUITests.swift; sourceTree = "<group>"; };
+		DBCC788D2762C10A009323A5 /* WhatsitUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsitUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DBCC789A2762CB5E009323A5 /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
+		DBCC789C2762D09B009323A5 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		DBDB8E59279DB2D700815FFD /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		DBEC87BC2765996E00FC0427 /* ClassifyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifyViewModel.swift; sourceTree = "<group>"; };
+		DBEC87C02765A6AE00FC0427 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		DBEC87C22765A7C300FC0427 /* ClassifyImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifyImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DBA17AC1217BCDF8008AFDE2 /* Frameworks */ = {
+		DBCC786A2762C108009323A5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB65322221CC7F18003CBED4 /* Reachability.framework in Frameworks */,
-				DB65322021CC7F14003CBED4 /* Pods_Whatsit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBCC787A2762C10A009323A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBCC78842762C10A009323A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		55802EF67D4B6F7EDAAB2623 /* Pods */ = {
+		DBCC78642762C108009323A5 = {
 			isa = PBXGroup;
 			children = (
-				14955758FAC9FA5DE414F6B9 /* Pods-Whatsit.debug.xcconfig */,
-				FD5B4544623BF38B077A8113 /* Pods-Whatsit.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		DBA17ABB217BCDF8008AFDE2 = {
-			isa = PBXGroup;
-			children = (
-				DB2E675C21CB3AC90026CBE3 /* RestKit.framework */,
-				DBA17AE5217C4852008AFDE2 /* SVProgressHUD.framework */,
-				DBA17AC6217BCDF8008AFDE2 /* Whatsit */,
-				DBA17AC5217BCDF8008AFDE2 /* Products */,
-				DBDAD28521BF69BF00B72B31 /* Frameworks */,
-				55802EF67D4B6F7EDAAB2623 /* Pods */,
+				DBCC786F2762C108009323A5 /* WhatsIt */,
+				DBCC78802762C10A009323A5 /* WhatsitTests */,
+				DBCC788A2762C10A009323A5 /* WhatsitUITests */,
+				DBCC786E2762C108009323A5 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		DBA17AC5217BCDF8008AFDE2 /* Products */ = {
+		DBCC786E2762C108009323A5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DBA17AC4217BCDF8008AFDE2 /* Whatsit.app */,
+				DBCC786D2762C108009323A5 /* Whatsit.app */,
+				DBCC787D2762C10A009323A5 /* WhatsItTests.xctest */,
+				DBCC78872762C10A009323A5 /* WhatsItUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DBA17AC6217BCDF8008AFDE2 /* Whatsit */ = {
+		DBCC786F2762C108009323A5 /* WhatsIt */ = {
 			isa = PBXGroup;
 			children = (
-				DBA17AC7217BCDF8008AFDE2 /* AppDelegate.swift */,
-				DBA17ADB217BE088008AFDE2 /* ViewController.swift */,
-				DBA17ACB217BCDF8008AFDE2 /* Main.storyboard */,
-				DBA17ACE217BCDFA008AFDE2 /* Assets.xcassets */,
-				DBA17AD0217BCDFA008AFDE2 /* LaunchScreen.storyboard */,
-				DB3DCA1023BC1E200062C952 /* GoogleService-Info.plist */,
-				DBA17AD3217BCDFA008AFDE2 /* Info.plist */,
-				DB0F571B217FC9BF00E8C47C /* UIImageView.swift */,
-				DB0F571D217FD69700E8C47C /* String.swift */,
-				DBAF07E121BF73120011391B /* NetworkManager.swift */,
+				DBCC789A2762CB5E009323A5 /* MobileNetV2.mlmodel */,
+				DBCC78702762C108009323A5 /* WhatsItApp.swift */,
+				DBEC87BC2765996E00FC0427 /* ClassifyViewModel.swift */,
+				DBEC87C22765A7C300FC0427 /* ClassifyImageView.swift */,
+				DBDB8E59279DB2D700815FFD /* SplashView.swift */,
+				DBCC78722762C108009323A5 /* ContentView.swift */,
+				DBEC87C02765A6AE00FC0427 /* ImagePicker.swift */,
+				DBCC789C2762D09B009323A5 /* UIImage+Extension.swift */,
+				DBCC78742762C109009323A5 /* Assets.xcassets */,
+				DBCC78762762C109009323A5 /* Preview Content */,
 			);
-			path = Whatsit;
+			path = WhatsIt;
 			sourceTree = "<group>";
 		};
-		DBDAD28521BF69BF00B72B31 /* Frameworks */ = {
+		DBCC78762762C109009323A5 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				DBEE59F423B94354008387CF /* VisualRecognition.framework */,
-				DBEE59F123B941DC008387CF /* VisualRecognition.framework */,
-				DB65322121CC7F18003CBED4 /* Reachability.framework */,
-				DB65321F21CC7F14003CBED4 /* Pods_Whatsit.framework */,
-				DBDAD28621BF69BF00B72B31 /* SystemConfiguration.framework */,
-				0BC7EA2E819E41066CD8ADD3 /* Pods_Whatsit.framework */,
+				DBCC78772762C109009323A5 /* Preview Assets.xcassets */,
 			);
-			name = Frameworks;
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DBCC78802762C10A009323A5 /* WhatsitTests */ = {
+			isa = PBXGroup;
+			children = (
+				DBCC78812762C10A009323A5 /* WhatsItTests.swift */,
+			);
+			path = WhatsitTests;
+			sourceTree = "<group>";
+		};
+		DBCC788A2762C10A009323A5 /* WhatsitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DBCC788B2762C10A009323A5 /* WhatsItUITests.swift */,
+				DBCC788D2762C10A009323A5 /* WhatsitUITestsLaunchTests.swift */,
+			);
+			path = WhatsitUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DBA17AC3217BCDF8008AFDE2 /* Whatsit */ = {
+		DBCC786C2762C108009323A5 /* WhatsIt */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DBA17AD6217BCDFA008AFDE2 /* Build configuration list for PBXNativeTarget "Whatsit" */;
+			buildConfigurationList = DBCC78912762C10A009323A5 /* Build configuration list for PBXNativeTarget "WhatsIt" */;
 			buildPhases = (
-				E9A69C2A2E14E3341B08D8BA /* [CP] Check Pods Manifest.lock */,
-				DBA17AC0217BCDF8008AFDE2 /* Sources */,
-				DBA17AC1217BCDF8008AFDE2 /* Frameworks */,
-				DBA17AC2217BCDF8008AFDE2 /* Resources */,
-				7B010EA33AD6DBC283A88B27 /* [CP] Embed Pods Frameworks */,
-				DB65321A21CC7E6E003CBED4 /* Embed Frameworks */,
-				DB65322521CC85CA003CBED4 /* ShellScript */,
+				DBCC78692762C108009323A5 /* Sources */,
+				DBCC786A2762C108009323A5 /* Frameworks */,
+				DBCC786B2762C108009323A5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Whatsit;
-			productName = Whatsit;
-			productReference = DBA17AC4217BCDF8008AFDE2 /* Whatsit.app */;
+			name = WhatsIt;
+			productName = WhatsItCoreML;
+			productReference = DBCC786D2762C108009323A5 /* Whatsit.app */;
 			productType = "com.apple.product-type.application";
+		};
+		DBCC787C2762C10A009323A5 /* WhatsItTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBCC78942762C10A009323A5 /* Build configuration list for PBXNativeTarget "WhatsItTests" */;
+			buildPhases = (
+				DBCC78792762C10A009323A5 /* Sources */,
+				DBCC787A2762C10A009323A5 /* Frameworks */,
+				DBCC787B2762C10A009323A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBCC787F2762C10A009323A5 /* PBXTargetDependency */,
+			);
+			name = WhatsItTests;
+			productName = WhatsItCoreMLTests;
+			productReference = DBCC787D2762C10A009323A5 /* WhatsItTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DBCC78862762C10A009323A5 /* WhatsItUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBCC78972762C10A009323A5 /* Build configuration list for PBXNativeTarget "WhatsItUITests" */;
+			buildPhases = (
+				DBCC78832762C10A009323A5 /* Sources */,
+				DBCC78842762C10A009323A5 /* Frameworks */,
+				DBCC78852762C10A009323A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBCC78892762C10A009323A5 /* PBXTargetDependency */,
+			);
+			name = WhatsItUITests;
+			productName = WhatsItCoreMLUITests;
+			productReference = DBCC78872762C10A009323A5 /* WhatsItUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DBA17ABC217BCDF8008AFDE2 /* Project object */ = {
+		DBCC78652762C108009323A5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
-				ORGANIZATIONNAME = "Azure Horse Creations";
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
 				TargetAttributes = {
-					DBA17AC3217BCDF8008AFDE2 = {
-						CreatedOnToolsVersion = 10.0;
+					DBCC786C2762C108009323A5 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					DBCC787C2762C10A009323A5 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = DBCC786C2762C108009323A5;
+					};
+					DBCC78862762C10A009323A5 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = DBCC786C2762C108009323A5;
 					};
 				};
 			};
-			buildConfigurationList = DBA17ABF217BCDF8008AFDE2 /* Build configuration list for PBXProject "Whatsit" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = DBCC78682762C108009323A5 /* Build configuration list for PBXProject "Whatsit" */;
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = DBA17ABB217BCDF8008AFDE2;
-			productRefGroup = DBA17AC5217BCDF8008AFDE2 /* Products */;
+			mainGroup = DBCC78642762C108009323A5;
+			productRefGroup = DBCC786E2762C108009323A5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DBA17AC3217BCDF8008AFDE2 /* Whatsit */,
+				DBCC786C2762C108009323A5 /* WhatsIt */,
+				DBCC787C2762C10A009323A5 /* WhatsItTests */,
+				DBCC78862762C10A009323A5 /* WhatsItUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DBA17AC2217BCDF8008AFDE2 /* Resources */ = {
+		DBCC786B2762C108009323A5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBA17AD2217BCDFA008AFDE2 /* LaunchScreen.storyboard in Resources */,
-				DB3DCA1123BC1E200062C952 /* GoogleService-Info.plist in Resources */,
-				DBA17ACF217BCDFA008AFDE2 /* Assets.xcassets in Resources */,
-				DBA17ACD217BCDF8008AFDE2 /* Main.storyboard in Resources */,
+				DBCC78782762C109009323A5 /* Preview Assets.xcassets in Resources */,
+				DBCC78752762C109009323A5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBCC787B2762C10A009323A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBCC78852762C10A009323A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		7B010EA33AD6DBC283A88B27 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Whatsit/Pods-Whatsit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Whatsit/Pods-Whatsit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Whatsit/Pods-Whatsit-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DB65322521CC85CA003CBED4 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\necho \"Target architectures: $ARCHS\"\n\nAPP_PATH=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}\"\n\nfind \"$APP_PATH\" -name '*.framework' -type d | while read -r FRAMEWORK\ndo\nFRAMEWORK_EXECUTABLE_NAME=$(defaults read \"$FRAMEWORK/Info.plist\" CFBundleExecutable)\nFRAMEWORK_EXECUTABLE_PATH=\"$FRAMEWORK/$FRAMEWORK_EXECUTABLE_NAME\"\necho \"Executable is $FRAMEWORK_EXECUTABLE_PATH\"\necho $(lipo -info \"$FRAMEWORK_EXECUTABLE_PATH\")\n\nFRAMEWORK_TMP_PATH=\"$FRAMEWORK_EXECUTABLE_PATH-tmp\"\n\n# remove simulator's archs if location is not simulator's directory\ncase \"${TARGET_BUILD_DIR}\" in\n*\"iphonesimulator\")\necho \"No need to remove archs\"\n;;\n*)\nif $(lipo \"$FRAMEWORK_EXECUTABLE_PATH\" -verify_arch \"i386\") ; then\nlipo -output \"$FRAMEWORK_TMP_PATH\" -remove \"i386\" \"$FRAMEWORK_EXECUTABLE_PATH\"\necho \"i386 architecture removed\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_TMP_PATH\" \"$FRAMEWORK_EXECUTABLE_PATH\"\nfi\nif $(lipo \"$FRAMEWORK_EXECUTABLE_PATH\" -verify_arch \"x86_64\") ; then\nlipo -output \"$FRAMEWORK_TMP_PATH\" -remove \"x86_64\" \"$FRAMEWORK_EXECUTABLE_PATH\"\necho \"x86_64 architecture removed\"\nrm \"$FRAMEWORK_EXECUTABLE_PATH\"\nmv \"$FRAMEWORK_TMP_PATH\" \"$FRAMEWORK_EXECUTABLE_PATH\"\nfi\n;;\nesac\n\necho \"Completed for executable $FRAMEWORK_EXECUTABLE_PATH\"\necho $(lipo -info \"$FRAMEWORK_EXECUTABLE_PATH\")\n\ndone\n";
-		};
-		E9A69C2A2E14E3341B08D8BA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Whatsit-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		DBA17AC0217BCDF8008AFDE2 /* Sources */ = {
+		DBCC78692762C108009323A5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBA17AC8217BCDF8008AFDE2 /* AppDelegate.swift in Sources */,
-				DB0F571C217FC9BF00E8C47C /* UIImageView.swift in Sources */,
-				DBAF07E221BF73120011391B /* NetworkManager.swift in Sources */,
-				DB0F571E217FD69700E8C47C /* String.swift in Sources */,
-				DBA17ADC217BE088008AFDE2 /* ViewController.swift in Sources */,
+				DBCC789B2762CB5E009323A5 /* MobileNetV2.mlmodel in Sources */,
+				DBCC78732762C108009323A5 /* ContentView.swift in Sources */,
+				DBEC87BD2765996E00FC0427 /* ClassifyViewModel.swift in Sources */,
+				DBEC87C32765A7C300FC0427 /* ClassifyImageView.swift in Sources */,
+				DBEC87C12765A6AE00FC0427 /* ImagePicker.swift in Sources */,
+				DBDB8E5A279DB2D700815FFD /* SplashView.swift in Sources */,
+				DBCC78712762C108009323A5 /* WhatsItApp.swift in Sources */,
+				DBCC789D2762D09B009323A5 /* UIImage+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBCC78792762C10A009323A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBCC78822762C10A009323A5 /* WhatsItTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBCC78832762C10A009323A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBCC788C2762C10A009323A5 /* WhatsItUITests.swift in Sources */,
+				DBCC788E2762C10A009323A5 /* WhatsitUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		DBA17ACB217BCDF8008AFDE2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DBA17ACC217BCDF8008AFDE2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		DBCC787F2762C10A009323A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBCC786C2762C108009323A5 /* WhatsIt */;
+			targetProxy = DBCC787E2762C10A009323A5 /* PBXContainerItemProxy */;
 		};
-		DBA17AD0217BCDFA008AFDE2 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DBA17AD1217BCDFA008AFDE2 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
+		DBCC78892762C10A009323A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBCC786C2762C108009323A5 /* WhatsIt */;
+			targetProxy = DBCC78882762C10A009323A5 /* PBXContainerItemProxy */;
 		};
-/* End PBXVariantGroup section */
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		DBA17AD4217BCDFA008AFDE2 /* Debug */ = {
+		DBCC788F2762C10A009323A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -319,13 +345,13 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -344,7 +370,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -354,14 +380,13 @@
 			};
 			name = Debug;
 		};
-		DBA17AD5217BCDFA008AFDE2 /* Release */ = {
+		DBCC78902762C10A009323A5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -381,15 +406,15 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -400,7 +425,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -410,84 +435,202 @@
 			};
 			name = Release;
 		};
-		DBA17AD7217BCDFA008AFDE2 /* Debug */ = {
+		DBCC78922762C10A009323A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14955758FAC9FA5DE414F6B9 /* Pods-Whatsit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WhatsIt/Preview Content\"";
 				DEVELOPMENT_TEAM = 92S6VPY8H9;
-				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
-				INFOPLIST_FILE = Whatsit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "The app would like to use the camera";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.9.4;
+				MARKETING_VERSION = 1.9.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.azurehorsecreations.Whatsit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PRODUCT_NAME = Whatsit;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		DBA17AD8217BCDFA008AFDE2 /* Release */ = {
+		DBCC78932762C10A009323A5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD5B4544623BF38B077A8113 /* Pods-Whatsit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WhatsIt/Preview Content\"";
 				DEVELOPMENT_TEAM = 92S6VPY8H9;
-				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
-				INFOPLIST_FILE = Whatsit/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "The app would like to use the camera";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.9.4;
+				MARKETING_VERSION = 1.9.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.azurehorsecreations.Whatsit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PRODUCT_NAME = Whatsit;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		DBCC78952762C10A009323A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 92S6VPY8H9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.azurehorsecreations.WhatsItCoreMLTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhatsIt.app/WhatsIt";
+			};
+			name = Debug;
+		};
+		DBCC78962762C10A009323A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 92S6VPY8H9;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.azurehorsecreations.WhatsItCoreMLTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhatsIt.app/WhatsIt";
+			};
+			name = Release;
+		};
+		DBCC78982762C10A009323A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 92S6VPY8H9;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.azurehorsecreations.WhatsItUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WhatsIt;
+			};
+			name = Debug;
+		};
+		DBCC78992762C10A009323A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 92S6VPY8H9;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.azurehorsecreations.WhatsItUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WhatsIt;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DBA17ABF217BCDF8008AFDE2 /* Build configuration list for PBXProject "Whatsit" */ = {
+		DBCC78682762C108009323A5 /* Build configuration list for PBXProject "Whatsit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DBA17AD4217BCDFA008AFDE2 /* Debug */,
-				DBA17AD5217BCDFA008AFDE2 /* Release */,
+				DBCC788F2762C10A009323A5 /* Debug */,
+				DBCC78902762C10A009323A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		DBA17AD6217BCDFA008AFDE2 /* Build configuration list for PBXNativeTarget "Whatsit" */ = {
+		DBCC78912762C10A009323A5 /* Build configuration list for PBXNativeTarget "WhatsIt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DBA17AD7217BCDFA008AFDE2 /* Debug */,
-				DBA17AD8217BCDFA008AFDE2 /* Release */,
+				DBCC78922762C10A009323A5 /* Debug */,
+				DBCC78932762C10A009323A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
+		};
+		DBCC78942762C10A009323A5 /* Build configuration list for PBXNativeTarget "WhatsItTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBCC78952762C10A009323A5 /* Debug */,
+				DBCC78962762C10A009323A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DBCC78972762C10A009323A5 /* Build configuration list for PBXNativeTarget "WhatsItUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBCC78982762C10A009323A5 /* Debug */,
+				DBCC78992762C10A009323A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = DBA17ABC217BCDF8008AFDE2 /* Project object */;
+	rootObject = DBCC78652762C108009323A5 /* Project object */;
 }
